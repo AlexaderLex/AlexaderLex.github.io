@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Каталог</title>
+        <link rel="icon" type="image/png" href="../img/logos/taras_logo-short.png">
+        <link rel="stylesheet" href="../fonts/Roboto/stylesheet.css">
+        <link rel="stylesheet" href="../fonts/webfonts/brands.css">
+        <link rel="stylesheet" href="../fonts/webfonts/regular.css">
+        <link rel="stylesheet" href="../fonts/webfonts/solid.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/links.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/catalog.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/media.css">
+        <script src="../js/product.json" type="application/json" defer></script>
+        <!-- <script src="../js/fetchData.js" defer></script> -->
+        <script src="../js/catalog.js" defer type="module"></script>
+        <!-- <script src="../js/script.js" defer></script> -->
+
+    </head>
+
+    <body class="catalog">
+
+        <nav id="header-nav" class="nav header-nav">
+            <h1><a href="#"><img src="../img/logos/logo-big-long.png" alt="Taras-stroy Company big logo"></a></h1>
+
+            <p class="open-menu" id="open-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </p>
+            <ul class="">
+                <li><a href="../index.html" class="main">Главная</a></li>
+                <li><a href="#" class="nav-catalog">Каталог</a></li>
+                <li><a href="#" class="delivery">Доставка и оплата</a></li>
+                <li><a href="#" class="contacts">Контакты</a></li>
+                <li class="time">Пн-Вс 9:00 - 20:00</li>
+                <li class="phone">8 (800) 333 44 55</li>
+            </ul>
+        </nav>
+
+        <div class="header-info">
+            <div class="search-div">
+                <input type="search" id="search" class="search" placeholder="Поиск по сайту">
+            </div>
+            <div class="compare-basket">
+                <div class="catalog-div">
+                    <span class="img-span catalog-span"></span>
+                    <span class="text-span"><a href="#">Каталог</a></span>
+                </div>
+                <div class="compare">
+                    <span class="img-span compare-span"></span>
+                    <span class="text-span"><a href="#">Сравнение</a></span>
+                    <span class="num-span">0</span>
+                </div>
+                <div class="basket">
+                    <span class="img-span basket-span"></span>
+                    <span class="text-span"><a href="#">Корзина</a></span>
+                    <span class="num-span">0</span>
+                </div>
+                <div class="login">
+                    <span class="img-span enter"></span>
+                    <span class="text-span"><a href="#">Войти</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="main-wrapper">
+            <h1>Каталог</h1>
+            <div class="hide-show">
+                <button id="show">Показать все товары</button>
+                <button id="hide">Скрыть товары</button>
+            </div>
+            <div class="main-content" id="main-content">
+
+            </div>
+        </div>
+
+
+
+        <footer>
+            <nav id="footer-nav" class="nav footer-nav">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Бренды</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">О Нас</a></li>
+                    <li><a href="#">Мы на карте</a></li>
+                </ul>
+            </nav>
+            <div class="footer-bottom">
+                <p>
+                    <img src="../img/logos/taras_logo.png" alt="Taras-stroy Company small logo">
+                    <span>&copy;</span>
+                </p>
+
+            </div>
+
+
+        </footer>
+    </body>
+
+</html>

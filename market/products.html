@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Products</title>
+        <link rel="stylesheet" href="./style/products.css">
+    </head>
+    <body>
+        <nav id="header-nav" class="nav header-nav">
+            <h1><a href="#"><img src="../img/logos/logo-big-long.png" alt="Taras-stroy Company big logo"></a></h1>
+
+            <p class="open-menu" id="open-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </p>
+            <ul class="">
+                <li><a href="../index.html" class="main">Главная</a></li>
+                <li><a href="./catalog.html" class="nav-catalog">Каталог</a></li>
+                <li><a href="#" class="delivery">Доставка и оплата</a></li>
+                <li><a href="./create.html" class="contacts">Контакты</a></li>
+                <li class="time">Пн-Вс 9:00 - 20:00</li>
+                <li class="phone">8 (800) 333 44 55</li>
+            </ul>
+        </nav>
+
+        <div class="header-info">
+            <div class="search-div">
+                <input type="search" id="search" class="search" placeholder="Поиск по сайту">
+            </div>
+            <div class="compare-basket">
+                <div class="catalog-div">
+                    <span class="img-span catalog-span"></span>
+                    <span class="text-span"><a href="#">Каталог</a></span>
+                </div>
+                <div class="compare">
+                    <span class="img-span compare-span"></span>
+                    <span class="text-span"><a href="#">Сравнение</a></span>
+                    <span class="num-span">0</span>
+                </div>
+                <div class="basket">
+                    <span class="img-span basket-span"></span>
+                    <span class="text-span"><a href="#">Корзина</a></span>
+                    <span class="num-span">0</span>
+                </div>
+                <div class="login">
+                    <span class="img-span enter"></span>
+                    <span class="text-span"><a href="#">Войти</a></span>
+                </div>
+            </div>
+        </div>
+        <!-- header-info end -->
+        <div class="main-wrapper">
+            <h5 id="breadcrumb"><a href="./../../index.html">Каталог</a><a href="#">Инструменты</a><a href="#">Прочий
+                    инструмент</a></h5>
+
+            <div class="main-content" id="main-content">
+                <h2 class="main-content-title" id="main-content-title">Прочий инструмент</h2>
+                <div class="top-filter">
+                    <div class="price">
+                        <ul class="sort-by-price">
+
+                            <details>
+                                <summary>Сортировка:</summary>
+                                <li><a href="#" tabindex="0">Сначала недорогие</a></li>
+                                <li><a href="#" tabindex="0">Сначала дорогие</a></li>
+
+                            </details>
+                        </ul>
+
+                    </div>
+                    <div class="manufacturer">
+                        <ul class="group-by-manufacturer">
+                            <details>
+                                <summary>Группировка:</summary>
+                                <li><a href="#" tabindex="0">По производителю</a></li>
+                                <li><a href="#" tabindex="0">Без Группировки</a></li>
+                            </details>
+                        </ul>
+                    </div>
+                </div>
+                <div class="goods-wrapper">
+                    <aside id="side-bar" class="side-bar">
+                        <div class="aside-filter">
+                            <div class="side-bar-search-div">
+                                <input type="search" id="side-bar-search" class="side-bar-search"
+                                    placeholder="Поиск по категории">
+                            </div>
+                            <div class="price-div">
+                                <ul class="choose-price-range">
+                                    <details>
+                                        <summary>Цена</summary>
+                                        <li><input type="number" min="100" max="10000" value="100"></li>
+                                        <li><input type="number" min="100" max="10000" value="10000"></li>
+
+                                    </details>
+                                </ul>
+                            </div>
+                            <div class="manufacture-div">
+                                <ul class="choose-manufacturer">
+                                    <details>
+                                        <summary>Производитель</summary>
+                                        <li>Тарас</li>
+                                        <li>Ильдар</li>
+                                        <li>Лёша</li>
+                                        <li>Саша</li>
+                                    </details>
+                                </ul>
+                            </div>
+                            <div class="special-offer">
+                                <ul>
+                                    <details>
+                                        <summary>Акция</summary>
+                                        <span class="why">Вы спрашиваете: "Почему так дёшево?"</span>
+                                        <li class="because">Всё равно выкидывать.</li>
+                                        <li class="because">Забирайте, хранить негде...</li>
+                                        <li class="because">У соседа спиздил!</li>
+                                    </details>
+                                </ul>
+                                <button class="apply">Применить</button>
+                                <button class="redo">Сбросить</button>
+                            </div>
+                            <!-- aside-filter end -->
+
+                        </div>
+                    </aside>
+                    <article id="article" class="level">
+
+                        <template id="card-template">
+                            <div class="product-card">
+                                <div class="card-wrapper">
+
+                                    <div class="product-image">
+                                        <a href="#"><img src="./image/5.2 Фото Клей Баутгер 0,8 кг без фона.png.webp"
+                                                alt="product"></a>
+                                    </div>
+
+                                    <div class="product-name">
+                                        <span>Лопата для говна кошек</span>
+                                    </div>
+                                    <div class="product-info-compare">
+                                        <label class="compare">
+                                            <input type="checkbox">
+                                            Сравнить
+                                        </label>
+                                        <button class="favourite">♡</button>
+                                    </div>
+
+                                    <div class="product-buy">
+                                        <div class="product-price">1 210 ₽</div>
+                                        <button class="buy">Купить</button>
+                                    </div>
+
+                                </div>
+                                <!-- card-wrapper -->
+                                <div class="product-code">1/2/4</div>
+                            </div>
+                        </template>
+
+                        <div class="product-card">
+                            <div class="card-wrapper">
+
+                                <div class="product-image">
+                                    <a href="#"><img src="./image/Torino Black_45x90_F1.jpg.webp" alt="product"></a>
+                                </div>
+
+                                <div class="product-name">
+                                    <span>Керамогранит ColiseumGRES TORINO BLACK 45х90</span>
+                                </div>
+                                <div class="product-info-compare">
+                                    <label class="compare">
+                                        <input type="checkbox">
+                                        Сравнить
+                                    </label>
+                                    <button class="favourite">♡</button>
+                                </div>
+
+                                <div class="product-buy">
+                                    <div class="product-price">1 605 руб./м.кв.</div>
+                                    <button class="buy">Купить</button>
+                                </div>
+
+                            </div>
+                            <!-- card-wrapper -->
+                            <div class="product-code">1/1/0/18/0</div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="card-wrapper">
+
+                                <div class="product-image">
+                                    <a href="#"><img src="./image/Torino Grey_45x90_F1.jpg.webp" alt="product"></a>
+                                </div>
+
+                                <div class="product-name">
+                                    <span>Керамогранит ColiseumGRES TORINO GREY 45х90</span>
+                                </div>
+                                <div class="product-info-compare">
+                                    <label class="compare">
+                                        <input type="checkbox">
+                                        Сравнить
+                                    </label>
+                                    <button class="favourite">♡</button>
+                                </div>
+
+                                <div class="product-buy">
+                                    <div class="product-price">1 565 руб./м.кв.</div>
+                                    <button class="buy">Купить</button>
+                                </div>
+
+                            </div>
+                            <!-- card-wrapper -->
+                            <div class="product-code">1/1/0/18/1</div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="card-wrapper">
+
+                                <div class="product-image">
+                                    <a href="#"><img src="./image/Torino White_45x90_F1.jpg.webp" alt="product"></a>
+                                </div>
+
+                                <div class="product-name">
+                                    <span>Керамогранит ColiseumGRES TORINO WHITE 45х90</span>
+                                </div>
+                                <div class="product-info-compare">
+                                    <label class="compare">
+                                        <input type="checkbox">
+                                        Сравнить
+                                    </label>
+                                    <button class="favourite">♡</button>
+                                </div>
+
+                                <div class="product-buy">
+                                    <div class="product-price">1 565 руб./м.кв.</div>
+                                    <button class="buy">Купить</button>
+                                </div>
+
+                            </div>
+                            <!-- card-wrapper -->
+                            <div class="product-code">1/1/0/18/2</div>
+                        </div>
+                    </article>
+                </div>
+                <!-- goods-wrapper end -->
+
+
+            </div>
+            <!-- main-content end -->
+        </div>
+        <!-- main-wrapper end -->
+
+        <footer>
+            <nav id="footer-nav" class="nav footer-nav">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Бренды</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">О Нас</a></li>
+                    <li><a href="#">Мы на карте</a></li>
+                </ul>
+            </nav>
+            <div class="footer-bottom">
+                <p>
+                    <img src="../img/logos/taras_logo.png" alt="Taras-stroy Company small logo">
+                    <span>©</span>
+                </p>
+
+            </div>
+        </footer>
+    </body>
+</html>
