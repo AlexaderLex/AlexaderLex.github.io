@@ -1,0 +1,226 @@
+.main-wrapper {
+    margin: 0 auto;
+    width: 90%;
+    min-height: 30vh;
+    background-color: var(--clr-dark-blue);
+    padding: 2em;
+}
+
+.main-wrapper h1 {
+    color: var(--clr-white);
+    text-align: center;
+}
+
+.main-content {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    box-shadow: 0 0 0 1px var(--clr-light-blue);
+    gap: 2rem;
+    min-height: 20vh;
+    background-color: var(--clr-dark-blue);
+    padding: 1.7em;
+    color: var(--clr-white);
+    list-style-type: none;
+}
+
+a {
+    color: var(--link);
+}
+
+.level-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2rem 1rem;
+    position: relative;
+}
+
+.level-head::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.level-head:hover::before {
+    background-color: rgba(200, 200, 200, 0.1);
+}
+
+.level-title {
+    display: inline-block;
+    padding: 0 0.5rem;
+}
+
+.level-qnt {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    box-shadow: 0 0 1px var(--level-3);
+    margin-left: auto;
+    width: max-content;
+    min-width: calc(var(--rem) * 3);
+    text-align: center;
+    line-height: 3rem;
+    order: 2;
+}
+
+.level-btn {
+    all: unset;
+    width: max-content;
+    margin-left: auto;
+    /* outline: 1px solid red; */
+    display: block;
+    position: absolute;
+    right: 48px;
+    cursor: pointer;
+}
+
+.level-angle-down {
+    display: inline-block;
+    width: var(--angle-width);
+    height: var(--angle-width);
+    border: 1px solid var(--clr-white);
+    border-left-color: transparent;
+    border-top-color: transparent;
+    transform: rotate(45deg);
+    transition: transform 300ms;
+}
+
+.up {
+    --link: lime;
+    transform: rotate(225deg);
+    border: 2px solid var(--link);
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+
+.level-2-head .level-link {
+    --link: #4fcaff;
+    font-size: 1.4rem;
+}
+
+.list:not(.level-1) {
+    margin-left: var(--margin);
+}
+
+
+/** *** display levels *** **/
+
+.list {
+    display: none;
+}
+
+.sub-list {
+    display: none;
+}
+
+.list.active {
+    display: list-item;
+}
+
+.sub-list.active {
+    display: list-item;
+}
+
+.level-1 {
+    display: grid;
+}
+
+.hide-show {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* outline: 1px solid white; */
+}
+
+.hide-show button {
+    /* all: unset; */
+    width: 200px;
+    height: 30px;
+    margin: 1rem;
+    color: var(--clr-white);
+    font-size: 1em;
+    cursor: pointer;
+    background-color: var(--clr-link);
+}
+
+#hide {
+    display: none;
+    color: var(--clr-white);
+    background: var(--clr-dark-blue);
+}
+
+.level-head:not(.level-1-head) :where(span) {
+    --angle-width: 1rem;
+    --rem: 0.6rem;
+    box-shadow: 1px 1px 0 rgba(0, 255, 0, 0.3);
+    padding: 0;
+    line-height: 1;
+}
+
+.level-item {
+    margin: var(--rem) 0;
+}
+
+.level-2-item-head .level-link {
+    --link: --link: rgb(82, 251, 82);
+    font-size: 1.4rem;
+}
+
+.next .level-2-item-head .level-link {
+    --link: #4fcaff;
+}
+
+.level-2-item.items h3 a {
+    --link: pink;
+}
+
+.level-3-head .level-link {
+    --link: rgb(253, 200, 114);
+    font-size: 1.2rem;
+}
+
+.level-3-item.items .level-link {
+    --link: rgb(248, 112, 112);
+}
+
+.level-4-head .level-link {
+    --link: lightsalmon;
+    font-size: 1.2rem;
+}
+
+.sub-list {
+    margin-left: calc(var(--em) + 1rem);
+    list-style-type: decimal;
+    font-size: 1.2rem;
+}
+
+.sub-list li {
+    margin: 0.7rem 0;
+}
+
+.sub-list li a {
+    --link: #eeefef;
+    font-size: 1.2rem;
+    color: var(--clr-light-grey-bg);
+}
+
+.level-item {
+    box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.16);
+    list-style-type: none;
+    padding: var(--em);
+    /* min-height: 300px; */
+    background-color: var(--clr-dark-blue);
+    border-radius: 7px;
+}
+
+.level-item:hover {
+    box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.05), 0 20px 16px 0 rgba(255, 255, 255, 0.08)
+}
+
+
+/* .level-2,
+.level-3,
+.level-4 {
+    display: none;
+} */

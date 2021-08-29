@@ -1,0 +1,44 @@
+:root {
+    --clr-dark-blue: #0c2326;
+    --clr-light-blue: #4fcaff;
+    --clr-head: #3a3a3a;
+    --clr-text: #212529;
+    --clr-white: #fff;
+    --clr-link: #007bff;
+    --clr-grey-bg: rgb(161, 161, 161);
+    --clr-light-grey-bg: #eeefef;
+    --clr-btn-send: #fa3e19;
+    --angle-width: 1.3rem;
+    --rem: 1rem;
+    --em: 1em;
+    --i: 0;
+    --link: #fff;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: var(--clr-white);
+    color: var(--clr-text);
+    font-size: 1.6rem;
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#hidden {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}

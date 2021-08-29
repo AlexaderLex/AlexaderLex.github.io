@@ -1,0 +1,222 @@
+@import url("../fonts/Roboto/stylesheet.css");
+@import url("../fonts/webfonts/brands.css");
+@import url("../fonts/webfonts/regular.css");
+@import url("../fonts/webfonts/solid.css");
+@import url("./style.css");
+@import url("./links.css");
+@import url("./header.css");
+@import url("./slider.css");
+@import url("./footer.css");
+
+.main-wrapper {
+    width: 90vw;
+    margin: 0 auto;
+    padding: var(--em);
+}
+
+.main-wrapper h5 a {
+    color: var(--clr-head);
+    display: inline-block;
+    font-weight: 400;
+    text-decoration: none;
+    padding: calc(var(--rem) * 0.5) var(--em);
+    border-radius: 12px;
+    box-shadow: 0 0 3px rgba(100, 100, 100, 0.4);
+    background-color: var(--white);
+}
+
+.main-wrapper h5 a:last-child {
+    color: var(--clr-link);
+}
+
+.main-content {
+    margin: var(--em) auto;
+    padding: calc(var(--em) * 3);
+    box-shadow: 0 0 10px 0 rgba(90, 90, 90, 0.7);
+    background-color: var(--clr-light-grey-bg);
+}
+
+.level {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
+    gap: var(--em);
+}
+
+.level-card {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+    /* padding: var(--rem); */
+    display: flex;
+    background-color: var(--clr-white);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+}
+
+.level-card:focus,
+.level-card:hover {
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.05), 0 29px 26px 0 rgba(0, 0, 0, 0.08);
+}
+
+.level-card:hover img {
+    transform: scale(1.05);
+}
+
+.level-image,
+.level-title {
+    width: 100%;
+    text-align: center;
+    margin: var(--em);
+    padding: calc(var(--rem) *1.2);
+}
+
+.level-image {
+    flex-basis: 80%;
+    /* padding: 1rem 0.5rem; */
+}
+
+.level-title {
+    flex-basis: 10%;
+    font-size: clamp(1rem + 0.3vw, 1rem + 0.5vw, 1rem + 1vw);
+    padding-bottom: 2rem;
+}
+
+.level-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transform: scale(1);
+    transition: transform 300ms;
+}
+
+.code {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    font-size: 1.2rem;
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+}
+
+@media screen and (max-width: 700px) {
+
+    .nav ul,
+    #header-nav {
+        flex-direction: column;
+    }
+
+    .nav ul {
+        display: none;
+    }
+
+    .footer-nav ul {
+        display: flex;
+    }
+
+    .nav ul.open {
+        display: flex;
+    }
+
+    .open-menu {
+        display: flex;
+    }
+
+    .nav ul.open {
+        display: flex;
+    }
+
+    .nav ul li:nth-child(5) {
+        margin: 0 auto;
+    }
+
+    .main-wrapper {
+        width: 100%;
+    }
+
+    .header-info {
+        flex-direction: column;
+        position: relative;
+    }
+
+    #search {
+        width: 80vw;
+    }
+
+    .compare-basket {
+        flex-direction: column;
+    }
+
+    .compare,
+    .basket,
+    .login,
+    .catalog {
+        border-color: transparent;
+    }
+
+    .header-slider {
+        display: none;
+    }
+
+    .active {
+        order: 2;
+    }
+
+    .side-item {
+        width: 100%;
+        font-size: 1.3em;
+    }
+
+    .side-item.active {
+        background-color: var(--clr-dark-blue);
+        color: var(--clr-light-blue);
+        border-bottom-color: var(--clr-light-grey-bg);
+    }
+
+    .main-content {
+        margin: 0;
+        padding: 0;
+    }
+
+    .level {
+        margin: 0;
+        padding: 0;
+        grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr));
+    }
+
+    .level-card:first-child {
+        margin-top: var(--rem);
+    }
+
+    .level-card:last-child {
+        margin-bottom: var(--rem);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .main-wrapper {
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .main-wrapper h5 {
+        padding: 0 1rem;
+    }
+
+    .main-content {
+        margin: 0;
+        padding: 0;
+    }
+
+    .level {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(80vw, 1fr));
+        column-gap: var(--rem);
+        row-gap: var(--rem);
+        padding: var(--rem);
+    }
+
+}

@@ -1,0 +1,74 @@
+/**  Main content ******************  */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    background-color: var(--clr-light-grey-bg);
+    padding: calc(var(--padding) * 2);
+}
+
+.main-content>* {
+    margin: 0;
+    padding: 0;
+}
+
+.main-content-side {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex: 1 1 20%;
+}
+
+
+/* .main-content-side > * {
+    flex: 1 1 100%;
+} */
+
+.side-item {
+    background-color: var(--clr-light-blue);
+    color: var(--clr-white);
+    margin: 0;
+    font-size: 2.2rem;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--clr-dark-blue);
+    width: 20vw;
+}
+
+.main-content-body {
+    flex: 1 1 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-gray);
+    position: relative;
+}
+
+.text {
+    display: block;
+    width: 200px;
+    height: 100px;
+    background-color: var(--clr-dark-blue);
+    color: var(--clr-light-blue);
+    position: relative;
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 900;
+    font-size: 4em;
+}
+
+.text::before {
+    content: "";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 4em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

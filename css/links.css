@@ -1,0 +1,9 @@
+body.main a.main,
+body.catalog a.nav-catalog,
+body.delivery a.delivery,
+body.contacts a.contacts,
+body.register a.register,
+body.enter a.enter,
+body.main a.main {
+    color: #B9E5F6;
+}

@@ -1,0 +1,94 @@
+/**  slider ******************  */
+
+.header-slider {
+  display: flex;
+  align-content: center;
+  background-color: var(--clr-dark-blue);
+  padding: 2em;
+}
+
+.slider-sidebar {
+  display: block;
+  align-self: auto;
+  flex-basis: 20%;
+  padding: 1em;
+}
+
+.slider-sidebar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slider {
+   flex-basis: 75%;
+   flex-grow: 0;
+   margin: 1px 0;
+   max-height: 100%;
+   overflow: hidden;
+   position: relative;
+   width: 100%;
+}
+
+.wrapper {
+   width: calc(100% * 9);
+   height: 100%;
+   display: flex;
+   align-items: center;
+   transition: left 500ms ease-in-out;
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+
+.wrapper div {
+   display: block;
+   width: 100%;
+   height: 100%;
+   padding: 0;
+   outline: 3px solid var(--clr-dark-blue);
+   outline-offset: -2px;
+}
+
+.wrapper div img {
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+}
+
+
+
+.buttons {
+  position: absolute;
+  z-index: 2;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+}
+
+.buttons button {
+  all: unset;
+  background-color: var(--clr-light-grey-bg);
+  color: #fff;
+  font-size: 1rem;
+  display: inline-block;
+  margin: 0 5px;
+  width: 1vw;
+  height: 1vw;
+  border: 2px solid var(--clr-link);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.buttons button.active {
+  background-color: var(--clr-light-blue);
+}
+
+.buttons button:hover,
+.buttons button:focus {
+  background-color: var(--clr-light-blue);
+  color: var(--clr-light-blue);
+}

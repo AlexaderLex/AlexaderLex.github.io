@@ -1,0 +1,130 @@
+/* * Main-content *** ============ */
+.main-wrapper {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.main-content {
+    margin-bottom: 5rem;
+    background-color: var(--clr-light-grey-bg);
+    width: 100%;
+    /* min-height: 70vh; */
+    margin: 0 auto;
+    padding: 3em;
+}
+
+
+.level {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
+    /* grid-auto-flow: column; */
+    column-gap: var(--rem);
+    row-gap: var(--rem);
+}
+
+.level-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* outline: 2px solid red; */
+    width: 100%;
+}
+
+.level-title {
+    flex-basis: 90%;
+}
+
+.level-qnt {
+    order: 2;
+    flex-basis: 10%;
+    padding: 0 var(--rem);
+    /* padding-top: 0; */
+    box-shadow: 1px 1px 3px var(--clr-dark-blue);
+    text-align: center;
+}
+
+.level-btn {
+    all: unset;
+    display: inline-block;
+    flex-basis: 5%;
+    width: var(--angle-width);
+    height: var(--angle-width);
+    position: relative;
+    padding: var(--rem);
+    padding-top: 0;
+    /* align-self: center; */
+}
+
+.level-angle-down {
+    display: inline-block;
+    width: var(--angle-width);
+    height: var(--angle-width);
+    border: 2px solid var(--clr-dark-blue);
+    border-right-color: transparent;
+    border-top-color: transparent;
+    transform: rotate(-45deg);
+    cursor: pointer;
+    transition: transform 300ms;
+    position: relative;
+
+}
+
+.up {
+    transform: rotate(-225deg);
+}
+
+.level-angle-down.active {
+    transform: rotate(-225deg);
+}
+
+
+.level-card {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+    padding: var(--rem);
+    display: flex;
+    background-color: var(--clr-white);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.level-card:focus,
+.level-card:hover {
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.05), 0 29px 26px 0 rgba(0, 0, 0, 0.08);
+}
+
+.level-card:hover img {
+    transform: scale(1.05);
+}
+
+.level-image,
+.level-title {
+    width: 100%;
+    text-align: center;
+    margin: var(--em);
+    padding: 0 3em;
+}
+
+.level-image {
+    flex-basis: 80%;
+    padding: 3em;
+}
+
+.level-title {
+    flex-basis: 10%;
+    font-size: clamp(1rem + 0.3vw, 1rem + 0.5vw, 1rem + 1vw);
+}
+
+.level-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(1);
+    transition: transform 300ms;
+}
+
+/* .level-div img:hover {
+    transform: scale(1.1);
+} */

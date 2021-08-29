@@ -1,0 +1,123 @@
+@media screen and (max-width: 700px) {
+
+    .nav ul,
+    #header-nav {
+        flex-direction: column;
+    }
+
+    .nav ul {
+        display: none;
+    }
+
+    .footer-nav ul {
+        display: flex;
+    }
+
+    .nav ul.open {
+        display: flex;
+    }
+
+    .open-menu {
+        display: flex;
+    }
+
+    .nav ul.open {
+        display: flex;
+    }
+
+    .nav ul li:nth-child(5) {
+        margin: 0 auto;
+    }
+
+    .main-wrapper {
+        width: 100%;
+    }
+
+    .header-info {
+        flex-direction: column;
+        position: relative;
+    }
+
+    #search {
+        width: 80vw;
+    }
+
+    .compare-basket {
+        flex-direction: column;
+    }
+
+    .compare,
+    .basket,
+    .login,
+    .catalog-div {
+        border-color: transparent;
+    }
+
+    .header-slider {
+        display: none;
+    }
+
+    .active {
+        order: 2;
+    }
+
+    .side-item {
+        width: 100%;
+        font-size: 1.3em;
+    }
+
+    .side-item.active {
+        background-color: var(--clr-dark-blue);
+        color: var(--clr-light-blue);
+        border-bottom-color: var(--clr-light-grey-bg);
+    }
+
+    .main-content {
+        margin: 0;
+        padding: 0;
+    }
+
+    .level {
+        margin: 0;
+        padding: 0;
+        grid-template-columns: repeat(auto-fill, minmax(80vw, 1fr));
+    }
+
+    .level-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .level-card:first-child {
+        margin-top: var(--rem);
+    }
+
+    .level-card:last-child {
+        margin-bottom: var(--rem);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .main-wrapper {
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .main-wrapper h5 {
+        padding: 0 1rem;
+    }
+
+    .main-content {
+        margin: 0;
+        padding: 0;
+    }
+
+    .level {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(80vw, 1fr));
+        column-gap: var(--rem);
+        row-gap: var(--rem);
+        padding: var(--rem);
+    }
+
+}
