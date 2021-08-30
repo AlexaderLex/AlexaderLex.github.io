@@ -4,6 +4,7 @@
 
 import { levelOne } from "./levels.js";
 import { openMenu } from "./menu-open.js";
+import { products } from "./product.js"
 
 const mainContent = document.getElementById("main-content");
 // const insertString = 'item.insertAdjacentElement("beforeend", level)';
@@ -112,7 +113,71 @@ window.addEventListener("scroll", () => {
     } else if (winYOffset < 200) {
         scrollTop.style.transform = "scale(0)";
     }
+});
+const getObject = (el) => {
+    // const el = localStorage.getItem("current-product-code");
+    // const el = example;
+    let str = "";
+    const parts = el.split("/");
+    for (let x = 0; x < parts.length; x++) {
+        let part = parts[x];
+        
+        if (x===0) {
+            str = `products[${part}].`;
+        }
+         if (x > 0 && x < parts.length-1) {
+             str = str + `subDivision[${part}].`;
+         }
+         if (x === parts.length-1) {
+            str = str + `subDivision[${part}]`;
+        }
+    }
+    const final = eval(str);
+    return final;
+}
+
+const cloneTemplates = (el) => {
+    const articleTemplate = document.getElementById("card-template");
+    const clone = articleTemplate.content.cloneNode(true);
+    const image = clone.querySelector(".product-image a img");
+    image.src = `./image/${el.item_image}.webp`;
+    const name = clone.querySelector(".product-name span");
+    name.innerText = el.item_name;
+    const price = clone.querySelector(".product-buy div");
+    price.innerText = el.item_price;
+    const productCode = clone.querySelector(".product-code");
+    productCode.innerText = el.item_code;
+   
+    const modal = document.getElementById("modal");
+    // modal.innerHTML = "";
+    modal.append(clone);
+    modal.style.transform = "scale(1)";
+
+    
+    const closeButton = document.getElementById("close");
+    closeButton.addEventListener('click', () => {
+    const modal = document.getElementById("modal");
+    const productCard = modal.querySelector(".product-card");
+    modal.style.transform = "scale(0)"
+    productCard.remove();
+    
 })
+
+}
+const showElementCard = (el) => {
+    return () => {
+        const elementCode = el.dataset.code;
+        const elementData = getObject(elementCode);
+        cloneTemplates(elementData);
+    }
+};
+
+const productsElements = document.querySelectorAll(".product");
+productsElements.forEach((element) => {
+    element.addEventListener("click", showElementCard(element));
+});
+
+
 
 export { goodsArray };
 

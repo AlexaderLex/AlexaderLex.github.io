@@ -17,8 +17,9 @@
         <link rel="stylesheet" href="../css/catalog.css">
         <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="./style/scroll.css">
+        <link rel="stylesheet" href="./style/modal.css">
         <link rel="stylesheet" href="../css/media.css">
-        <script src="../js/product.json" type="application/json" defer></script>
+        <script src="../js/product.js" type="module" defer></script>
         <!-- <script src="../js/fetchData.js" defer></script> -->
         <script src="../js/catalog.js" defer type="module"></script>
         <!-- <script src="../js/script.js" defer></script> -->
@@ -83,33 +84,33 @@
 
         <template id="card-template">
             <div class="product-card">
+                <span id="close">&#8855;</span>
                 <div class="card-wrapper">
-
                     <div class="product-image">
                         <a href="#"><img src="./image/5.2 Фото Клей Баутгер 0,8 кг без фона.png.webp" alt="product"></a>
                     </div>
 
                     <div class="product-name">
                         <span>Лопата для говна кошек</span>
+                        <div class="product-buy">
+                            <div class="product-price">1 210 ₽</div>
+                            <!-- <button class="buy">Купить</button> -->
+                        </div>
                     </div>
                     <div class="product-info-compare">
-                        <label class="compare">
-                            <input type="checkbox">
-                            Сравнить
-                        </label>
+                        <button class="buy">Купить</button>
+                        <button class="compare">Сравнить</button>
                         <button class="favourite"><span class="heart">&#9825;</span></button>
                     </div>
 
-                    <div class="product-buy">
-                        <div class="product-price">1 210 ₽</div>
-                        <button class="buy">Купить</button>
-                    </div>
+
 
                 </div>
                 <!-- card-wrapper -->
                 <div class="product-code">1/2/4</div>
             </div>
         </template>
+        <div id="modal"></div>
 
         <footer>
             <nav id="footer-nav" class="nav footer-nav">

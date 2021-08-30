@@ -1,6 +1,11 @@
 html {
     scroll-behavior: smooth;
 }
+
+body {
+    position: relative;
+}
+
 #scroll-top {
     width: 60px;
     height: 60px;
@@ -51,5 +56,10 @@ html {
     height: 70%;
     background-color: rgba(150, 150, 150, 1);
     display: block;
-    
 }
+
+.product a {
+    display: block;
+    padding: var(--rem);
+}
+
