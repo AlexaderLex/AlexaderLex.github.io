@@ -48,6 +48,7 @@
 
 .product-info-compare {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     margin: 1em;
@@ -90,3 +91,9 @@ button {
     cursor: pointer;
 }
 
+@media screen and (max-width: 700px) {
+    .product-card {
+        width: 96%;
+        height: 90%;
+    }
+}
