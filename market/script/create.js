@@ -12,10 +12,11 @@ const articleContent = () => {
     cards.forEach (card => {
         if (card.dataset.items === "false") {
             card.addEventListener("click", nextLevel(card))
-        } else {
+        } else if (card.dataset.items === "true") {
             card.addEventListener("click", getItems (card))
         }
     })
+    
 };
 
 const nextLevel = (el) => {
@@ -107,9 +108,7 @@ const getItems = (el) => {
 const nextOne = () => {
     const cards = document.querySelectorAll (".level-card");
     cards.forEach((card) => {
-        if (card.dataset.code === undefined) {
-            card.style.display = "none";
-        }
+
        if (card.dataset.items === "false") {
            card.addEventListener("click", nextLevel(card));
        } else if (card.dataset.items === "true") {
@@ -119,6 +118,6 @@ const nextOne = () => {
 }
 nextOne();
 
-// console.log(products[3].subDivision[0].subDivision[2]);
+console.log(products[1].subDivision[3].subDivision[0].subDivision[1]);
 
 export { articleContent };
