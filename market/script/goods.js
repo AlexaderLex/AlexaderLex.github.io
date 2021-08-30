@@ -36,7 +36,7 @@ const getObject = () => {
 const currentObject = getObject();
 // console.log(currentObject);
 
-const cloneTemplates = (el) => {
+const cloneTemplates = (el, length) => {
     const articleTemplate = templates[0];
     const clone = articleTemplate.content.cloneNode(true);
     const image = clone.querySelector(".product-image a img");
@@ -48,18 +48,17 @@ const cloneTemplates = (el) => {
     const productCode = clone.querySelector(".product-code");
     productCode.innerText = el.item_code;
     const pageTitle = document.querySelector(".main-content-title");
-    pageTitle.innerText = el.item_groupName;
+    pageTitle.innerHTML = el.item_groupName + `<span class="goods-length"> (товаров - ${length})</span>`;
    
     article.append(clone);
     const stringCode = el.item_string_code;
     const stringCodeSplit = stringCode.split("/");
     stringCodeSplit.length = stringCodeSplit.length-1;
-    // console.log(breadCrumb);
 }
 
 const objectSub = currentObject.subDivision;
 objectSub.forEach((obj) => {
-    cloneTemplates(obj)
+    cloneTemplates(obj, objectSub.length)
     document.title = obj.item_groupName;
     
 });
@@ -85,4 +84,15 @@ for (let x = 0; x< bcsSplit.length; x++) {
     }
     breadCrumb.append(link);
 }
+
+window.addEventListener("scroll", () => {
+    const scrollTop = document.getElementById("scroll-top");
+    const winYOffset = window.scrollY;
+        // console.log(window.scrollY);
+    if(winYOffset > 200) {
+        scrollTop.style.transform = "scale(1)";
+    } else if (winYOffset < 200) {
+        scrollTop.style.transform = "scale(0)";
+    }
+})
 

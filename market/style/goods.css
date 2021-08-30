@@ -8,6 +8,78 @@
 @import url("./../../css/slider.css");
 @import url("./../../css/footer.css");
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+}
+
+#scroll-top {
+    width: 60px;
+    height: 60px;
+    background-color: rgb(255, 255, 255, 0.4);
+    border: 2px solid rgba(150, 150, 150, 0.4);
+    border-radius: 7px;
+    position: sticky;
+    bottom: 3em; 
+    left: 90vw;
+    cursor: pointer;
+    transform: scale(0);
+    transform-origin: center;
+    transition: transform 500ms ease-in-out;
+}
+
+.scroll-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.scroll-wrapper a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.angle {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 1em;
+    height: 1em;
+    display: block;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(150, 150, 150, 1);
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.line {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 70%;
+    background-color: rgba(150, 150, 150, 1);
+    display: block;
+    
+}
+
+.main-wrapper {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.main-content {
+    background-color: var(--clr-light-grey-bg);
+    padding: var(--em);
+    margin-bottom: var(--em);
+}
+
 #breadcrumb {
     margin: var(--rem) 0;
 }
@@ -27,15 +99,8 @@
     color: var(--clr-link);
 }
 
-.main-wrapper {
-    width: 90vw;
-    margin: 0 auto;
-}
-
-.main-content {
-    background-color: var(--clr-light-grey-bg);
-    padding: var(--em);
-    margin-bottom: var(--em);
+.goods-length {
+    color: var(--clr-link);
 }
 
 .top-filter {
@@ -84,6 +149,10 @@ article {
     box-shadow: 2px 2px 5px  rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 0, 0, 0.1);
     margin: var(--em) auto;
     padding: var(--em);
+}
+
+.aside-filter div:hover {
+     box-shadow: 2px 2px 2px 2px rgba(12, 35, 38, 0.3);
 }
 
 .aside-filter div input:not([type="checkbox"]) {
@@ -138,11 +207,12 @@ details summary {
     display: block;
     width: 100%;
     height: calc(var(--em) * 2.5);
-    margin: var(--rem) auto;
+    margin: var(--em) auto;
     background-color: var(--clr-white);
     color: var(--clr-dark-blue);
     font-size: var(--em);
     border-radius: 7px;
+    cursor: pointer;
 }
 
 .apply {
@@ -238,6 +308,10 @@ details summary {
     cursor: pointer;
 }
 
+.buy:hover {
+     box-shadow: 2px 2px 1px rgba(12, 35, 38, 0.3);
+}
+
 .product-info-compare {
     grid-column: 3/5;
     grid-row: 5/7;
@@ -255,7 +329,7 @@ details summary {
     font-size: 32px;
     border-radius: 7px;
     box-shadow: 0 0 3px rgba(100, 100, 100, 0.5);
-    padding: 0 0.2em;
+    padding: 0 0.5em;
     cursor: pointer;
     position: relative;
     border: 1px solid transparent;
@@ -263,6 +337,7 @@ details summary {
 
 .favourite:hover {
     border-color: var(--clr-light-blue);
+    box-shadow: 2px 2px 1px rgba(12, 35, 38, 0.3);
 }
 
 .favourite::before {
@@ -289,6 +364,10 @@ details summary {
     border-radius: 12px;
     margin-right: var(--rem);
     box-shadow: 0 0 3px rgba(100, 100, 100, 0.5);
+}
+
+.compare:hover {
+    box-shadow: 2px 2px 1px rgba(12, 35, 38, 0.3);
 }
 
 .compare:hover {
