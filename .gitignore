@@ -1,0 +1,8 @@
+*.eslintrc.js
+
+*.vscode/
+lastModified.txt
+node_modules/
+package-lock.json
+package.json
+trash/
