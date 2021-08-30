@@ -152,18 +152,16 @@ const cloneTemplates = (el) => {
     // modal.innerHTML = "";
     modal.append(clone);
     modal.style.transform = "scale(1)";
-
     
     const closeButton = document.getElementById("close");
     closeButton.addEventListener('click', () => {
-    const modal = document.getElementById("modal");
-    const productCard = modal.querySelector(".product-card");
-    modal.style.transform = "scale(0)"
-    productCard.remove();
-    
-})
-
-}
+        const modal = document.getElementById("modal");
+        const productCard = modal.querySelector(".product-card");
+        modal.style.transform = "scale(0)"
+        productCard.remove();
+        
+    })
+};
 const showElementCard = (el) => {
     return () => {
         const elementCode = el.dataset.code;
