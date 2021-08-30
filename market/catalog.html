@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/catalog.css">
         <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="./style/scroll.css">
         <link rel="stylesheet" href="../css/media.css">
         <script src="../js/product.json" type="application/json" defer></script>
         <!-- <script src="../js/fetchData.js" defer></script> -->
@@ -24,7 +25,7 @@
 
     </head>
 
-    <body class="catalog">
+    <body class="catalog" id="catalog">
 
         <nav id="header-nav" class="nav header-nav">
             <h1><a href="#"><img src="../img/logos/logo-big-long.png" alt="Taras-stroy Company big logo"></a></h1>
@@ -80,7 +81,35 @@
             </div>
         </div>
 
+        <template id="card-template">
+            <div class="product-card">
+                <div class="card-wrapper">
 
+                    <div class="product-image">
+                        <a href="#"><img src="./image/5.2 Фото Клей Баутгер 0,8 кг без фона.png.webp" alt="product"></a>
+                    </div>
+
+                    <div class="product-name">
+                        <span>Лопата для говна кошек</span>
+                    </div>
+                    <div class="product-info-compare">
+                        <label class="compare">
+                            <input type="checkbox">
+                            Сравнить
+                        </label>
+                        <button class="favourite"><span class="heart">&#9825;</span></button>
+                    </div>
+
+                    <div class="product-buy">
+                        <div class="product-price">1 210 ₽</div>
+                        <button class="buy">Купить</button>
+                    </div>
+
+                </div>
+                <!-- card-wrapper -->
+                <div class="product-code">1/2/4</div>
+            </div>
+        </template>
 
         <footer>
             <nav id="footer-nav" class="nav footer-nav">
@@ -100,9 +129,12 @@
                 </p>
 
             </div>
-
-
         </footer>
+
+        <div id="scroll-top">
+            <div class="scroll-wrapper"><a href="#catalog"><span class="angle"></span><span class="line"></span></a>
+            </div>
+        </div>
     </body>
 
 </html>

@@ -103,5 +103,16 @@ if (hideBtn !== null) {
     hideBtn.addEventListener("click", hideAll);
 }
 
+window.addEventListener("scroll", () => {
+    const scrollTop = document.getElementById("scroll-top");
+    const winYOffset = window.scrollY;
+        // console.log(window.scrollY);
+    if(winYOffset > 200) {
+        scrollTop.style.transform = "scale(1)";
+    } else if (winYOffset < 200) {
+        scrollTop.style.transform = "scale(0)";
+    }
+})
+
 export { goodsArray };
 
