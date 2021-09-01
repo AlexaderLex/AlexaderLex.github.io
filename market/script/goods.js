@@ -46,7 +46,7 @@ const cloneTemplates = (el, length) => {
     const price = clone.querySelector(".product-buy div");
     price.innerText = el.item_price;
     const productCode = clone.querySelector(".product-code");
-    productCode.innerText = el.item_code;
+    productCode.innerText = "код товара: " +  el.item_code;
     const pageTitle = document.querySelector(".main-content-title");
     pageTitle.innerHTML = el.item_groupName + `<span class="goods-length"> (товаров - ${length})</span>`;
    

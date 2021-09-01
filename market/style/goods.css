@@ -66,7 +66,6 @@ body {
     height: 70%;
     background-color: rgba(150, 150, 150, 1);
     display: block;
-    
 }
 
 .main-wrapper {
@@ -281,7 +280,6 @@ details summary {
    height: 100%;
    min-width: 15vw;
    text-align: center;
-   
 }
 
 .product-price {
@@ -359,18 +357,17 @@ details summary {
     display: block;
 }
 
-.compare {
+.product-compare {
     border: 1px solid transparent;
     border-radius: 12px;
     margin-right: var(--rem);
     box-shadow: 0 0 3px rgba(100, 100, 100, 0.5);
+    padding: 1.2rem;
+    cursor: pointer;
 }
 
-.compare:hover {
+.product-compare:hover {
     box-shadow: 2px 2px 1px rgba(12, 35, 38, 0.3);
-}
-
-.compare:hover {
     border-color: var(--clr-light-blue);
 }
 
@@ -380,6 +377,13 @@ details summary {
     margin: 0 auto;
     text-align: left;
     margin-left: calc(var(--em) * 2.5);
+    font-size: 1.2rem;
+    visibility: hidden;
+    /* transition: visibility 350ms; */
+}
+
+.product-card:hover .product-code {
+    visibility: visible;
 }
 
 @media screen and (max-width: 700px) {

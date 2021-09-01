@@ -146,7 +146,7 @@ const cloneTemplates = (el) => {
     const price = clone.querySelector(".product-buy div");
     price.innerText = el.item_price;
     const productCode = clone.querySelector(".product-code");
-    productCode.innerText = el.item_code;
+    productCode.innerText = "код товара: " + el.item_code;
    
     const modal = document.getElementById("modal");
     // modal.innerHTML = "";

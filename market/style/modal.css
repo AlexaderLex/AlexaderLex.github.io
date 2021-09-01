@@ -10,6 +10,7 @@
     background-color: transparent;
     transform-origin: center;
     transition: transform 500ms;
+    outline-offset: -20px;
     z-index: 10;
 }
 

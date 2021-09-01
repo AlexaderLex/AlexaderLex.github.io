@@ -94,7 +94,6 @@ article {
     grid-template-columns: var(--em) 1fr var(--em) 2fr var(--em) 1fr var(--em);
     grid-template-rows: auto;
     row-gap: var(--em);
-    
 }
 
 .product-image {
@@ -103,7 +102,6 @@ article {
     margin-right: 12px;
     box-sizing: border-box;
     max-width: 170px;
-
 }
 
 .product-image img {
@@ -207,14 +205,14 @@ article {
     display: block;
 }
 
-.compare {
+.product-compare {
     border: 1px solid transparent;
     border-radius: 12px;
     margin-right: var(--rem);
     box-shadow: 0 0 3px rgba(100, 100, 100, 0.5);
 }
 
-.compare:hover {
+.product-compare:hover {
     border-color: var(--clr-light-blue);
 }
 
@@ -292,8 +290,5 @@ details li {
         text-align: center;
         margin: var(--em) auto;
     }
-    
-
-
 }
 
